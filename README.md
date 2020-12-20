@@ -170,7 +170,6 @@ foreach ($affiliatesDataList as $affiliateItem) {
     $errors[] = $affiliateItem->validate();
 }
 
-// Limpa todos os index que são null
 $errors = array_filter($errors, fn ($error) => !is_null($error));
 
 if (count($errors) > 0) {
